@@ -35,8 +35,8 @@ import { CoursesService } from './courses.service';
             <td [attr.colSpan]="colSpanVar"></td>
         </tr>
     </table>
-    <!--bootstrap test-->
-    <button class="btn btn-primary">Save</button>
+    <!--bootstrap test and isActive class binding-->
+    <button class="btn btn-primary" [class.active]="isActive">Save</button>
     `
 })
 export class CoursesComponent{
@@ -48,7 +48,8 @@ export class CoursesComponent{
     //eg colSpan in td html attribute , so need to put attr.colSpan above to tell angular that
     //it is html colSpan attribute
     colSpanVar =2;
-
+    //to add certain class in the Save button above dynamically base on certain condition
+    isActive=true;
     //constructor to initialize this object
     constructor(service:CoursesService){
         //import and use the CoursesService to get the courses array details
