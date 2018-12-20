@@ -35,6 +35,8 @@ import { CoursesService } from './courses.service';
             <td [attr.colSpan]="colSpanVar"></td>
         </tr>
     </table>
+    <!--bootstrap test-->
+    <button class="btn btn-primary">Save</button>
     `
 })
 export class CoursesComponent{

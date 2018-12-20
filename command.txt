@@ -2,7 +2,29 @@
 >ng g c <component_name>
 This command will also update the app.module and register this new component in the declarations section
 
-1) Generate Service using Angular CLI
+2) Generate Service using Angular CLI
 >ng g s <service_name>
 This command will NOT update the app.module and register this new service in the providers section,
 For service manually need to insert it, not same as component
+
+3) To use bootstrap , need to install bootstrap by running this command.
+>npm install bootstrap@3.3.7 --save 
+npm install bootstrap : download bootstrap and store it in nodemodules folder
+--save : add bootstrap as dependency in package.json
+3.3.7 is version , leave it empty for latest
+
+to uninstall
+>npm uninstall bootstrap --save 
+
+you can see the version added into package.json in dependency section
+"bootstrap": "^3.3.7",
+major.minor.patch , so you can install up to version 4 major version 3.4 / 3.9 
+but not version 4,5,6,7 of major than that
+
+4) once installed bootstrap need to import it in the global css stylesheet which is styles.css,
+there import the node modules path of the bootstrap
+
+5) >npm install
+when execute this , angular will download all the dependency based on package.json and store it
+in node modules as this node modules folder will not be in source control/git and take alot of spaces.
+

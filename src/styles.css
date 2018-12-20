@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files 
+~ is relative from node module folder
+so you can import the bootstrap css from nodemodules here*/
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body
+{
+    padding: 20px;
+}
