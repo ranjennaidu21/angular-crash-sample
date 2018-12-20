@@ -1,3 +1,4 @@
+import { CoursesService } from './courses.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -19,7 +20,14 @@ import { CourseComponent } from './course/course.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [  
+    //CoursesComponent dependent upon CoursesService
+    //so need to register this CoursesService as providers in this module
+    //this is must for dependecy injection to work else will give following error in chrome console
+    //No provider for CoursesService!
+    //this is Singleton pattern , only one single instace of CoursesService in memory will be used by all components
+    CoursesService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

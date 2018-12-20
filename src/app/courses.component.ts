@@ -1,6 +1,7 @@
 //we need to import decorator called component that we can attach to this class to make a 
 //class CoursesComponent component
 import {Component} from '@angular/core';
+import { CoursesService } from './courses.service';
 
 //this called a decorator function
 //in object we put property to tell angular how this component work
@@ -28,7 +29,22 @@ import {Component} from '@angular/core';
 })
 export class CoursesComponent{
     title = "List of courses";
-    courses = ["course1","course2","course3"];
+    courses;
+
+    //constructor to initialize this object
+    constructor(service:CoursesService){
+        //import and use the CoursesService to get the courses array details
+
+        //not recommended: instead of this add the service parameter inside the constructor above
+        //so that done by the Angular automatically - it will instantiate and pass it here
+        //this is called dependency injection - in order to work need to register this dependency 
+        //in app.module.ts
+        //this avoid tightly coupled
+        //let service = new CoursesService();
+
+        //now we have services , we can initialize the course variable above
+        this.courses= service.getCourses();
+    }
 
     getTitle(){
         return this.title;

@@ -1,3 +1,7 @@
 1) Generate Component using Angular CLI
 >ng g c <component_name>
-This command will also update the app.module and register this new component
+This command will also update the app.module and register this new component in the declarations section
+
+1) Generate Service using Angular CLI
+>ng g s <service_name>
+This command will also update the app.module and register this new service in the providers section
