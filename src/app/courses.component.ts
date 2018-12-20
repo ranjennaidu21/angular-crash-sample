@@ -39,6 +39,10 @@ import { CoursesService } from './courses.service';
     added style binding too (style.backgroundColor) based on certain condition similar to 
     class binding above.For more property can see: https://www.w3schools.com/jsref/dom_obj_style.asp -->
     <button [style.backgroundColor]="isActive? 'red':'green'" class="btn btn-primary" [class.active]="isActive">Save</button>
+    <!--$event is standard dom event-->
+    <div (click)="onDivClick()">
+    <button (click)="onTest($event)">Click Me</button>
+    </div>
     `
 })
 export class CoursesComponent{
@@ -69,6 +73,18 @@ export class CoursesComponent{
 
     getTitle(){
         return this.title;
+    }
+    
+    onTest($event){
+        //to stop event bubbling - the div clicked will not be called
+        $event.stopPropagation();
+        console.log("Button clicked",$event);
+    }
+
+    //to test event bubbling, for one click in the button , it will also call all the 
+    //dom above it click function. for exemple the div dom.
+    onDivClick(){
+        console.log("Div Clicked");
     }
 }
 
