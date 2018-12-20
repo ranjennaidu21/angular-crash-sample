@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-//take note that here we dont say as './course.component.ts'
+//take note that here we dont say as './courses.component.ts'
 //name of file without extension
-import { CoursesComponent } from './course.component';
+import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { CourseComponent } from './course/course.component';
     AppComponent,
     //whenever type and enter , 
     //automatically import statement added into top of the file
-    CoursesComponent,
+    CoursesComponent, 
     CourseComponent
   ],
   imports: [

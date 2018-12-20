@@ -9,10 +9,16 @@ import {Component} from '@angular/core';
     //<div id="courses"> selector will be "#courses"
     //here we want to refer to element called course
     selector: 'courses', // <courses>
-    template: '<h2>Courses</h2>' //html markup 
+
+    //data-binding using {{}} will render dynamically: when title value changes , the view automatically notified and changes
+    template: '<h2>{{ "Title: " + title + " Using method: " + getTitle()}}</h2>' //html markup 
 })
 export class CoursesComponent{
+    title = "List of courses";
 
+    getTitle(){
+        return this.title;
+    }
 }
 
 //once done need to add this component in app.module.ts declaration
