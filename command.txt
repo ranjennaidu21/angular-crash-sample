@@ -1,0 +1,3 @@
+1) Generate Component using Angular CLI
+>ng g c <component_name>
+This command will also update the app.module and register this new component

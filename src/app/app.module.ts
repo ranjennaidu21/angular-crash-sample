@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 //take note that here we dont say as './course.component.ts'
 //name of file without extension
 import { CoursesComponent } from './course.component';
+import { CourseComponent } from './course/course.component';
 
 @NgModule({
   //declarations , we add all the components for this module
@@ -12,7 +13,8 @@ import { CoursesComponent } from './course.component';
     AppComponent,
     //whenever type and enter , 
     //automatically import statement added into top of the file
-    CoursesComponent
+    CoursesComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule
