@@ -4,4 +4,5 @@ This command will also update the app.module and register this new component in 
 
 1) Generate Service using Angular CLI
 >ng g s <service_name>
-This command will also update the app.module and register this new service in the providers section
+This command will NOT update the app.module and register this new service in the providers section,
+For service manually need to insert it, not same as component
