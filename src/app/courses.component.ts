@@ -35,8 +35,10 @@ import { CoursesService } from './courses.service';
             <td [attr.colSpan]="colSpanVar"></td>
         </tr>
     </table>
-    <!--bootstrap test and isActive class binding-->
-    <button class="btn btn-primary" [class.active]="isActive">Save</button>
+    <!--bootstrap test and isActive class binding
+    added style binding too (style.backgroundColor) based on certain condition similar to 
+    class binding above.For more property can see: https://www.w3schools.com/jsref/dom_obj_style.asp -->
+    <button [style.backgroundColor]="isActive? 'red':'green'" class="btn btn-primary" [class.active]="isActive">Save</button>
     `
 })
 export class CoursesComponent{
