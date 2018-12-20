@@ -30,6 +30,11 @@ import { CoursesService } from './courses.service';
     we can useproperty binding , we bind this src property to imageUrl field/property in our component
     as below-->
     <img [src]="imageUrl2"/>
+    <table>
+        <tr>
+            <td [attr.colSpan]="colSpanVar"></td>
+        </tr>
+    </table>
     `
 })
 export class CoursesComponent{
@@ -37,6 +42,10 @@ export class CoursesComponent{
     courses;
     imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2CoE1LYq95sfDLcbujAFXzPe06QMzpD4VOKjqs6Tpt4HI0bvE";
     imageUrl2="http://images.clipartpanda.com/apple-20clip-20art-nicubunu_Apple_Clipart_Free.png";
+    //when binding you actually bind property of DOM object not HTML element
+    //eg colSpan in td html attribute , so need to put attr.colSpan above to tell angular that
+    //it is html colSpan attribute
+    colSpanVar =2;
 
     //constructor to initialize this object
     constructor(service:CoursesService){
