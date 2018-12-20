@@ -25,11 +25,18 @@ import { CoursesService } from './courses.service';
         {{ course }}
         </li>
     </ul>
+    <img src="{{imageUrl}}"/>
+    <!--instead of using string interpolation above for image
+    we can useproperty binding , we bind this src property to imageUrl field/property in our component
+    as below-->
+    <img [src]="imageUrl2"/>
     `
 })
 export class CoursesComponent{
     title = "List of courses";
     courses;
+    imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2CoE1LYq95sfDLcbujAFXzPe06QMzpD4VOKjqs6Tpt4HI0bvE";
+    imageUrl2="http://images.clipartpanda.com/apple-20clip-20art-nicubunu_Apple_Clipart_Free.png";
 
     //constructor to initialize this object
     constructor(service:CoursesService){
