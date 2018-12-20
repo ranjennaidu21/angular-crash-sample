@@ -43,6 +43,8 @@ import { CoursesService } from './courses.service';
     <div (click)="onDivClick()">
     <button (click)="onTest($event)">Click Me</button>
     </div>
+    <!--Event handling for keyup dom event, perform action when user press enter-->
+    <input (keyup.enter)="onKeyUp()"/>
     `
 })
 export class CoursesComponent{
@@ -85,6 +87,13 @@ export class CoursesComponent{
     //dom above it click function. for exemple the div dom.
     onDivClick(){
         console.log("Div Clicked");
+    }
+
+    //event filtering for keyup event wihtout putting the event code,
+    //eg 13 for enter 
+    //perform function when user press enter
+    onKeyUp(){
+        console.log("Enter was pressed");
     }
 }
 
