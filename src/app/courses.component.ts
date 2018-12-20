@@ -43,8 +43,12 @@ import { CoursesService } from './courses.service';
     <div (click)="onDivClick()">
     <button (click)="onTest($event)">Click Me</button>
     </div>
-    <!--Event handling for keyup dom event, perform action when user press enter-->
+    Event handling for keyup dom event, perform action when user press enter
     <input (keyup.enter)="onKeyUp()"/>
+    <br/>
+    <br/>
+    Event handling for keyup dom event, show input value when user press enter
+    <input #email (keyup.enter)="onKeyUpPrintValue(email.value)"/>
     `
 })
 export class CoursesComponent{
@@ -94,6 +98,11 @@ export class CoursesComponent{
     //perform function when user press enter
     onKeyUp(){
         console.log("Enter was pressed");
+    }
+
+    //if wanted to print the input value entered once press enter
+    onKeyUpPrintValue(email){
+        console.log(email);
     }
 }
 
