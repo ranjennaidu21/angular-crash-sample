@@ -48,7 +48,10 @@ import { CoursesService } from './courses.service';
     <br/>
     <br/>
     Event handling for keyup dom event, show input value when user press enter
-    <input #email (keyup.enter)="onKeyUpPrintValue(email.value)"/>
+    <!--old procedural language no longer used
+    <input [value]="email" (keyup.enter)="onKeyUpPrintValue()"/> 
+    -->
+    <input [value]="email" (keyup.enter)="onKeyUpPrintValue()"/>
     `
 })
 export class CoursesComponent{
@@ -101,6 +104,13 @@ export class CoursesComponent{
     }
 
     //if wanted to print the input value entered once press enter
+    //passing parameter is procedural language which used 30 years ago before oop 
+    // onKeyUpPrintValue(email){
+    //     console.log(email);
+    // }
+    //so now we declare the variable and dont pass parameter
+    email = "email.example.com";
+
     onKeyUpPrintValue(email){
         console.log(email);
     }
