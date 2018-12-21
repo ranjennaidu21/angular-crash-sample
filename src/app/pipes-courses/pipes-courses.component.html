@@ -1,0 +1,15 @@
+<!-- format the title to uppercase using pipes by adding | uppercase -->
+{{  course.title | uppercase  }} <br/>
+<!-- format the students number to decimal by adding , - adding | number , we use number keyword eventhough 
+the actual class in angular is decimal pipe -->
+{{  course.students | number }} <br/>
+<!-- format the rating number to decimal by adding number, and add arguments to tell how many number
+of digits after the decimal point , 1 is number of integer digit and min-max num of digits after
+decimal point, 2 min and 2 max -->
+{{  course.rating  | number:'1.2-2'  }} <br/>
+<!-- format the price using currency , by default will give USD, to change add mYR arg as below,
+you can also add true to indicate the currency symbol , also can format the decimal as rating above-->
+{{  course.price | currency:'MYR':true:'3.2-2' }} <br/>
+<!-- format date: for all format view https://angular.io/api/common/DatePipe
+This under CommonModule which exist in the BrowserModule already imported-->
+{{  course.releaseDate | date:'shortDate'  }}

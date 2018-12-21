@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 //name of file without extension
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
+import { PipesCoursesComponent } from './pipes-courses/pipes-courses.component';
 
 @NgModule({
   //declarations , we add all the components for this module
@@ -16,7 +17,7 @@ import { CourseComponent } from './course/course.component';
     //whenever type and enter , 
     //automatically import statement added into top of the file
     CoursesComponent, 
-    CourseComponent
+    CourseComponent, PipesCoursesComponent
   ],
   imports: [
     BrowserModule,
