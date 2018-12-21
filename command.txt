@@ -28,3 +28,6 @@ there import the node modules path of the bootstrap
 when execute this , angular will download all the dependency based on package.json and store it
 in node modules as this node modules folder will not be in source control/git and take alot of spaces.
 
+6) when use ngModel first time you can get this error
+Can't bind to 'ngModel' since it isn't a known property of 'input'.
+FIX: Import FormsModule which contain this ngModel in the app.module.ts under imports section

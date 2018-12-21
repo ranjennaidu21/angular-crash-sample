@@ -51,7 +51,10 @@ import { CoursesService } from './courses.service';
     <!--old procedural language no longer used
     <input [value]="email" (keyup.enter)="onKeyUpPrintValue()"/> 
     -->
-    <input [value]="email" (keyup.enter)="onKeyUpPrintValue()"/>
+    <!--for two-way data binding we can put two expression, first set 
+    the email value and next call up the keyUp event.
+    we use [()] two-way binding syntax (banana in box) and ngModel to implement twb-->
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUpPrintValue()"/>
     `
 })
 export class CoursesComponent{
@@ -110,9 +113,11 @@ export class CoursesComponent{
     // }
     //so now we declare the variable and dont pass parameter
     email = "email.example.com";
-
-    onKeyUpPrintValue(email){
-        console.log(email);
+    //for two-wa data-binding , the value in view automatically get updated whenever the
+    //variable updated here.
+    onKeyUpPrintValue(){
+        //change value and press enter to see the value changed in console
+        console.log(this.email);
     }
 }
 

@@ -1,6 +1,7 @@
 import { CoursesService } from './courses.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 //take note that here we dont say as './courses.component.ts'
@@ -18,7 +19,8 @@ import { CourseComponent } from './course/course.component';
     CourseComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [  
     //CoursesComponent dependent upon CoursesService
