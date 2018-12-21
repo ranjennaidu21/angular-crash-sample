@@ -1,3 +1,4 @@
+import { SummaryPipe } from './pipes-courses/summary.pipe';
 import { CoursesService } from './courses.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,7 +18,8 @@ import { PipesCoursesComponent } from './pipes-courses/pipes-courses.component';
     //whenever type and enter , 
     //automatically import statement added into top of the file
     CoursesComponent, 
-    CourseComponent, PipesCoursesComponent
+    CourseComponent, PipesCoursesComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

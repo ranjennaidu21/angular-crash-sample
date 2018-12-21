@@ -12,4 +12,13 @@ you can also add true to indicate the currency symbol , also can format the deci
 {{  course.price | currency:'MYR':true:'3.2-2' }} <br/>
 <!-- format date: for all format view https://angular.io/api/common/DatePipe
 This under CommonModule which exist in the BrowserModule already imported-->
-{{  course.releaseDate | date:'shortDate'  }}
+{{  course.releaseDate | date:'shortDate'  }} <br/>
+
+<!-- to use custom pipe summary by creating new summary.pipe.ts
+the 10 is limit send to the transform method in summary.pipe.ts -->
+<!-- test without send limit which will take 20chars -->
+{{  myText | summary}} <br/>
+<!-- test by send limit to 10chars -->
+{{  myText | summary:10}}
+
+

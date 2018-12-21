@@ -16,6 +16,10 @@ export class PipesCoursesComponent implements OnInit {
     releaseDate:new Date(2018,3,1)
   }
 
+  myText = `
+  asdjasdsssjoodieporiewpori assdaskljvidpfepofwepf ppaspdaosdqww asdasdasdasdasd
+  `
+
   constructor() { }
 
   ngOnInit() {

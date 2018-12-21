@@ -31,3 +31,6 @@ in node modules as this node modules folder will not be in source control/git an
 6) when use ngModel first time you can get this error
 Can't bind to 'ngModel' since it isn't a known property of 'input'.
 FIX: Import FormsModule which contain this ngModel in the app.module.ts under imports section
+
+7) For new custom pipe(.ts file) created , we need to import in the app.module.ts 
+under declaration section as well same like component
