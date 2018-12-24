@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular App';
+
+  //this is not possible withtout Input declaration of the isFavourite as input property in the favourite.component.ts
+   post = {
+     isFavourite:true
+   }
 }

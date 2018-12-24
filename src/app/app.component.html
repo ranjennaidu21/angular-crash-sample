@@ -1,3 +1,9 @@
 <h1>Angular</h1>
 <app-pipes-courses></app-pipes-courses>
 <courses></courses>
+
+<!-- will get error that it isn't a know property of favourite 
+in order to use property binding you need to define the property.
+in order to make component more reusable we need to use input property to pass input/state to component 
+and output property to raise event from this custom component. combination of this make it as public API-->
+<app-favourite [isFavourite]="post.isFavourite" (change)="onClick()"></app-favourite>

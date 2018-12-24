@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import { PipesCoursesComponent } from './pipes-courses/pipes-courses.component';
+import { FavouriteComponent } from './favourite/favourite.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   //declarations , we add all the components for this module
@@ -19,11 +21,13 @@ import { PipesCoursesComponent } from './pipes-courses/pipes-courses.component';
     //automatically import statement added into top of the file
     CoursesComponent, 
     CourseComponent, PipesCoursesComponent,
-    SummaryPipe
+    SummaryPipe,
+    FavouriteComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AngularFontAwesomeModule
   ],
   providers: [  
     //CoursesComponent dependent upon CoursesService
