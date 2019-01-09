@@ -9,14 +9,19 @@ import { Component, OnInit , Input } from '@angular/core';
 export class FavouriteComponent implements OnInit {
   //Input is another decorator for marking fieilds or properties as input properties
   //now this field is exposed to outside, in templates can bind it to somewhere else
-  @Input() isFavourite :boolean;
+
+  //we also can aliasing the input field by adding 'is-favourite' into bracket
+  //use this name in app.component.html
+  //aliases keep the contract of the component stable , let say in future if field name change
+  //it wont impact the overall code
+  @Input('is-favourite') isFavourite :boolean;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClick(){
+  onFavChange(){
     this.isFavourite = !this.isFavourite;
   }
 

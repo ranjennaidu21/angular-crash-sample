@@ -6,4 +6,6 @@
 in order to use property binding you need to define the property.
 in order to make component more reusable we need to use input property to pass input/state to component 
 and output property to raise event from this custom component. combination of this make it as public API-->
-<app-favourite [isFavourite]="post.isFavourite" (change)="onClick()"></app-favourite>
+
+<!-- now using is-favourite alias name as specified in favourite.component.ts -->
+<app-favourite [is-favourite]="post.isFavourite" (change)="onFavChange()"></app-favourite>
