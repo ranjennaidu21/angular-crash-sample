@@ -1,6 +1,26 @@
 <h1>Angular</h1>
 
-instead of using property binding wiht input properties , we goind to use ngContent element
+<!-- ngIf example -->
+<div *ngIf="courses.length>0">
+    List of courses
+</div>
+<div *ngIf="courses.length==0">
+   No courses available
+</div>
+
+<!-- Alternatively instead of using ngIf above , we can use if else kind of approach as below
+using the template variable, try to remove courses from .ts file -->
+<div *ngIf="courses.length>0;then coursesList else noCourses">
+</div>
+<ng-template #coursesList>
+        No courses available
+ </ng-template>
+<ng-template #noCourses>
+       No courses available
+</ng-template>
+
+
+<!-- instead of using property binding wiht input properties , we goind to use ngContent element -->
 <bootstrap-panel>
     <!-- ngContainer - during runtime , only take the content of this ngContainer
     it not goind to display in dom, like div or something else
