@@ -2,7 +2,10 @@
 
 instead of using property binding wiht input properties , we goind to use ngContent element
 <bootstrap-panel>
-    <div class="heading">Heading</div>
+    <!-- ngContainer - during runtime , only take the content of this ngContainer
+    it not goind to display in dom, like div or something else
+    Use this if want to render it without putting it inside div or any other dml elements -->
+    <ng-container class="heading">Heading</ng-container>
     <div class="body">
         <h2>Body</h2>
         <p>Some content here....</p>
