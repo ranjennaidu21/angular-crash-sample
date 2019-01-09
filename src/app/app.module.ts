@@ -12,6 +12,7 @@ import { CourseComponent } from './course/course.component';
 import { PipesCoursesComponent } from './pipes-courses/pipes-courses.component';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   //declarations , we add all the components for this module
@@ -22,7 +23,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     CoursesComponent, 
     CourseComponent, PipesCoursesComponent,
     SummaryPipe,
-    FavouriteComponent
+    FavouriteComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,

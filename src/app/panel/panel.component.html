@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <!-- ng-content is custom element from angular
+    select attribute can reference to class, id or element, here we use class 
+    ng-content going to be replaced with the .heading class content from app.component.html-->
+    <ng-content select=".heading"></ng-content>
+  </div>
+  <div class="panel-body">
+      <!-- ng-content going to be replaced with the .body class content from app.component.html -->
+      <ng-content select=".body"></ng-content>
+  </div>
+</div>
