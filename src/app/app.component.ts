@@ -13,4 +13,8 @@ export class AppComponent {
    post = {
      isFavourite:true
    }
+
+   onFavChange(){
+    console.log("FavouriteChanged")
+  }
 }
