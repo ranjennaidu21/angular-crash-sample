@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular App';
   courses = [];
+  //can hold to value for switch case , map or list
+  viewMode = 'map';
 
   //this is not possible withtout Input declaration of the isFavourite as input property in the favourite.component.ts
    post = {
