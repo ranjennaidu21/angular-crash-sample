@@ -25,4 +25,19 @@ export class AppComponent {
    onFavChange(){
     console.log("FavouriteChanged")
   }
+
+  onAdd(){
+    this.courseslist.push({ id:4,name:'course4'});
+  }
+
+  onRemove(course){
+    //get index of the course passed
+    let index = this.courseslist.indexOf(course);
+    //remove one object based on the index num
+    this.courseslist.splice(index,1);
+  }
+
+  onChange(course){
+    course.name = "UPDATED";
+  }
 }

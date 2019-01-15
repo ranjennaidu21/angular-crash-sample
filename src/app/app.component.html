@@ -1,9 +1,13 @@
 <h1>Angular</h1>
 
 <h1>ngFor example</h1>
+<button (click)="onAdd()">Add</button>
 <ul>
     <li *ngFor="let course of courseslist; index as i">
         {{i}} - {{course.name}}
+        <!-- pass the course from the interation above to remove each course -->
+        <button (click)="onRemove(course)">Remove</button>
+        <button (click)="onChange(course)">ChangeName</button>
     </li>
 </ul>
 
