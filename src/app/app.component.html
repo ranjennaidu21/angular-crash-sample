@@ -1,5 +1,22 @@
 <h1>Angular</h1>
 
+<h1>ngFor Load courses</h1>
+<button (click)="loadCourses()">Load Courses</button>
+<ul>
+    <!-- now instead of track by memorylocation for the coursesToLoad , we track by course.id
+    so that if the content not changed angular will not rerun the dom element
+    using trackCourse method by set it as reference below
+    when yo click load course again and again you cannot see the li highlighted in purple
+    in console as it not rerun the entire list as using same course object , same id
+    Dont use it by default in every page , only when have performance issue -->
+    <li *ngFor="let myCourse of coursesToLoad;  trackBy:trackCourse">
+        {{i}} - {{myCourse.name}}
+        <!-- pass the course from the interation above to remove each course -->
+        <button (click)="onRemoveCourseLoad(myCourse)">Remove</button>
+        <button (click)="onChange(myCourse)">ChangeName</button>
+    </li>
+</ul>
+
 <h1>ngFor example</h1>
 <button (click)="onAdd()">Add</button>
 <ul>

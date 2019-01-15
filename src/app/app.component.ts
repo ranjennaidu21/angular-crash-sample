@@ -14,6 +14,7 @@ export class AppComponent {
     { id:2,name:'course2'},
     { id:3,name:'course3'},
   ];
+  coursesToLoad;
   //can hold to value for switch case , map or list
   viewMode = 'map';
 
@@ -37,7 +38,26 @@ export class AppComponent {
     this.courseslist.splice(index,1);
   }
 
+  onRemoveCourseLoad(myCourse){
+    //get index of the course passed
+    let index2 = this.coursesToLoad.indexOf(myCourse);
+    //remove one object based on the index num
+    this.coursesToLoad.splice(index2,1);
+  }
+
   onChange(course){
     course.name = "UPDATED";
+  }
+
+  loadCourses(){
+    this.coursesToLoad = [
+      { id:5,name:'course5'},
+      { id:6,name:'course6'},
+      { id:7,name:'course7'},
+    ];
+  }
+
+  trackCourse(index,myCourse){
+    return myCourse? myCourse.id : undefined;
   }
 }
