@@ -1,8 +1,23 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <br/>
-<span class="far fa-star">
-    [class.fas fa-star]="isFavourite"
-    [class.far fa-star]="!isFavourite"
-    (click) = "onClick()"
-</span>
 
+<!-- instead of using class binding twice below , we can use ngClass (cleaner method) -->
+<p>Using class binding twice</p>
+<span 
+    class="glyphicon"
+    [class.glyphicon-star]="isFavourite"
+    [class.glyphicon-star-empty]="!isFavourite"
+    (click) = "onClick()"
+></span>
+
+<br>
+<p>Using ngClass directive</p>
+<!-- using ngClass directive , each key represent css class and value to represent to render or not -->
+<span 
+    class="glyphicon"
+    [ngClass]="{
+        'glyphicon-star' : isFavourite,
+        'glyphicon-star-empty' : !isFavourite
+    }"
+    (click) = "onClick()"
+></span>
