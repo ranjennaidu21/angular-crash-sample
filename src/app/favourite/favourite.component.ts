@@ -15,6 +15,8 @@ export class FavouriteComponent implements OnInit {
   //aliases keep the contract of the component stable , let say in future if field name change
   //it wont impact the overall code
   @Input('is-favourite') isFavourite :boolean;
+  
+  canSave = true;
 
   constructor() { }
 

@@ -11,7 +11,7 @@
 ></span>
 
 <br>
-<p>Using ngClass directive</p>
+<p>Using ngClass directive(cleaner code)</p>
 <!-- using ngClass directive , each key represent css class and value to represent to render or not -->
 <span 
     class="glyphicon"
@@ -21,3 +21,29 @@
     }"
     (click) = "onClick()"
 ></span>
+
+<br>
+<p>without ngStyle</p>
+<!-- the value will change based on the canSave boolean value in .ts
+    try change the value and see -->
+<button
+    [style.backgroundColor]="canSave? 'blue':'gray'"
+    [style.color]="canSave? 'white':'black'"
+    [style.fontWeight]="canSave? 'bold':'normal'"
+>
+Save
+</button>
+
+<br>
+<p>using ngStyle (cleaner code)</p>
+<!-- the value will change based on the canSave boolean value in .ts
+    try change the value and see -->
+<button
+    [ngStyle]="{
+        'backgroundColor' : canSave? 'blue':'gray',
+        'color' : canSave? 'white':'black',
+        'fontWeight' : canSave? 'bold':'normal'
+    }"
+>
+Save
+</button>
