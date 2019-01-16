@@ -105,3 +105,24 @@ and output property to raise event from this custom component. combination of th
 
 <!-- now using is-favourite alias name as specified in favourite.component.ts -->
 <app-favourite [is-favourite]="post.isFavourite" (change)="onFavChange()"></app-favourite>
+
+
+<br/><br/>
+If asigneed name empty: Solved by Using ngIf
+<!-- If let say the assignee name is null or empty , in chrome show blank screen and 
+in console will show error as cannot read property name of null 
+To avoid that there are two ways. Using ngIf -->
+<br/>
+<!--Using ngIf : render when value is true or exist -->
+<span *ngIf="task.assignee">{{task.assignee.name}}</span>
+
+
+<br/><br/>
+If asigneed name empty: Solved by Using Safe Traversal Operator
+<!-- If let say the assignee name is null or empty , in chrome show blank screen and 
+in console will show error as cannot read property name of null 
+To avoid that there are two ways. Using ngIf -->
+<br/>
+<!--Using Safe Traversal Operator : ? show that if assignee value is null or unassigned angular will ignore this 
+otherwise assign the name property -->
+<span *ngIf="task.assignee">{{task.assignee?.name}}</span>

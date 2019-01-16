@@ -23,6 +23,14 @@ export class AppComponent {
      isFavourite:true
    }
 
+   task = {
+    title:'Review Applications',
+    assignee: {
+      name: '',
+      age: '27'
+    }
+  }
+
    onFavChange(){
     console.log("FavouriteChanged")
   }
